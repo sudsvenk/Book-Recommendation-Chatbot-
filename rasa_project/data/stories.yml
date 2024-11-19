@@ -1,0 +1,41 @@
+version: "3.1"
+
+stories:
+- story: book search path
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: search_book
+    - action: action_search_book
+    - intent: thank
+    - action: utter_thank
+
+- story: direct book search path
+  steps:
+    - intent: search_book
+    - action: action_search_book
+    - intent: thank
+    - action: utter_thank
+
+- story: book recommendation path
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: recommend_book
+    - action: action_recommend_book
+    - intent: thank
+    - action: utter_thank
+
+- story: direct recommendation path
+  steps:
+    - intent: recommend_book
+    - action: action_recommend_book
+    - intent: thank
+    - action: utter_thank
+
+- story: simple greeting and goodbye
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: goodbye
+    - action: utter_goodbye

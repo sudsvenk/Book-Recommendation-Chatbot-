@@ -1,0 +1,66 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - hey there
+      - greetings
+      - what's up
+      - hi there
+
+  - intent: goodbye
+    examples: |
+      - bye
+      - goodbye
+      - see you around
+      - see you later
+      - good night
+      - bye bye
+      - have a nice day
+      - see you
+
+  - intent: search_book
+    examples: |
+      - fantasy books
+      - i want fantasy books
+      - can you find me books about {topic}
+      - search for books on {topic}
+      - I want to read about {topic}
+      - find books related to {topic}
+      - books about {topic}
+      - show me books about {topic}
+      - find me some {topic} books
+      - i want books about {topic}
+      - give me books on {topic}
+      - search {topic} books
+      - {topic} books
+      - find {topic} books
+
+  - intent: recommend_book
+    examples: |
+      - recommend me a book
+      - what should I read?
+      - suggest a good book
+      - I need a book recommendation
+      - what books do you recommend?
+      - give me a book suggestion
+      - what's a good book to read?
+      - suggest something to read
+      - help me find a good book
+      - what do you recommend reading?
+
+  - intent: thank
+    examples: |
+      - thanks
+      - thank you
+      - that's helpful
+      - thanks a lot
+      - appreciate it
+      - thank you so much
+      - thanks for the help

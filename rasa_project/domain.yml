@@ -1,0 +1,40 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - search_book
+  - recommend_book
+  - thank
+
+entities:
+  - topic
+
+slots:
+  topic:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: topic
+
+responses:
+  utter_greet:
+    - text: "Hello! I can help you find books. What kind of books are you interested in?"
+    - text: "Hi! I'm your book recommendation assistant. What kind of books would you like to explore?"
+    - text: "Welcome! I can help you discover great books. What genres interest you?"
+  
+  utter_goodbye:
+    - text: "Goodbye! Happy reading!"
+    - text: "See you later! Enjoy your books!"
+    
+  utter_thank:
+    - text: "You're welcome! Let me know if you need more book recommendations."
+    - text: "Glad I could help! Feel free to ask for more recommendations anytime."
+
+actions:
+  - action_search_book
+  - action_recommend_book
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
